@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("OnlineATV Client")>
 <Assembly: AssemblyDescription("A client for watching OnlineATV broadcasts")>
-<Assembly: AssemblyCompany("MarkPCExpert")>
+<Assembly: AssemblyCompany("linuxuser2064")>
 <Assembly: AssemblyProduct("OnlineATV Client")>
 <Assembly: AssemblyCopyright("Copyleft (L) linuxuser2064")>
 <Assembly: AssemblyTrademark("")>

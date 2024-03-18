@@ -30,7 +30,8 @@ Public NotInheritable Class SplashScreen
         '
         '    Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
 
-        Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
+        ' Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
+        Version.Text = Form1.VersionString
 
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright
@@ -43,9 +44,7 @@ Public NotInheritable Class SplashScreen
             IO.File.Delete(Environment.GetFolderPath(26) + "\rtmp.txt")
         Catch ex As Exception
         End Try
-        Dim client As WebClient = New WebClient()
-        client.Credentials = New NetworkCredential("ezyro_35056950", "di4pwp5em")
-        client.DownloadFile("ftp://ftpupload.net/htdocs/rtmp.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
+        My.Computer.Network.DownloadFile("https://alekeagle.me/hCbGVwu5aF.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
         'IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt")
         If IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt").Contains("rtmp://") = False Then
             MsgBox("Server is unavaible or inactive, channels 1-10 will not work.")

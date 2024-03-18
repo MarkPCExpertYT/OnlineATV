@@ -3,10 +3,19 @@ Imports System.Security
 Imports LibVLCSharp.[Shared]
 
 Public Class Form1
+
+
+    Public Const VersionString As String = "1.60"
+
+
+
     Public PlayerGraphics As Graphics
     Public libVLC = New LibVLC()
     Public WithEvents mp As MediaPlayer
     Public CurrentChannel As Int32 = 0
+    Public ShowNoise As Boolean = True
+    Public NoiseType As Image = My.Resources.noise
+    Public IsFullscreen As Boolean = False
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SplashScreen.Show()
         SplashScreen.Refresh()
@@ -15,9 +24,7 @@ Public Class Form1
             IO.File.Delete(Environment.GetFolderPath(26) + "\rtmp.txt")
         Catch ex As Exception
         End Try
-        Dim client As WebClient = New WebClient()
-        client.Credentials = New NetworkCredential("ezyro_35056950", "di4pwp5em")
-        client.DownloadFile("ftp://ftpupload.net/htdocs/rtmp.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
+        My.Computer.Network.DownloadFile("https://alekeagle.me/hCbGVwu5aF.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
         'IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt")
         If IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt").Contains("rtmp://") = False Then
             MsgBox("Server is unavaible or inactive, channels 1-10 will not work.")
@@ -115,7 +122,9 @@ URL: " & IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt") + "/ch
         If My.Computer.Keyboard.AltKeyDown = True Then
             If Not e.KeyCode = Keys.Enter Then
                 If FMainActive = True Then
-                    If MenuStrip1.Visible = True Then MenuStrip1.Hide() Else MenuStrip1.Show()
+                    If IsFullscreen = False Then
+                        If MenuStrip1.Visible = True Then MenuStrip1.Hide() Else MenuStrip1.Show()
+                    End If
                 End If
             End If
         End If
@@ -159,12 +168,14 @@ URL: " & IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt") + "/ch
         MenuStrip1.Hide()
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
+        IsFullscreen = True
     End Sub
     Private Sub ExitFullScreen()
         SplitContainer1.Show()
         Panel1.Show()
         Me.FormBorderStyle = FormBorderStyle.Sizable
         Me.WindowState = FormWindowState.Normal
+        IsFullscreen = False
     End Sub
 
 
@@ -186,52 +197,56 @@ URL: " & IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt") + "/ch
 Status: " & StateVal & "
 URL: " & IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt") + "/ch" + CurrentChannel.ToString
         Catch ex As Exception
-
         End Try
+        PictureBox1.Visible = ShowNoise
+        If PictureBox1.Image IsNot NoiseType Then
+            PictureBox1.Image = NoiseType
+        End If
     End Sub
 
     Public Sub mp_Buffering() Handles mp.Buffering
         StateVal = "Buffering"
-        PictureBox1.Show()
-        PictureBox1.Image = My.Resources.nois2
+        ShowNoise = True
+        NoiseType = My.Resources.nois2
     End Sub
     Public Sub mp_playing() Handles mp.Playing
         StateVal = "Playing"
-        PictureBox1.Hide()
+        ShowNoise = False
     End Sub
     Public Sub mp_opening() Handles mp.Opening
         StateVal = "Opening"
-        PictureBox1.Show()
-        PictureBox1.Image = My.Resources.nois2
+        ShowNoise = True
+        NoiseType = My.Resources.nois2
     End Sub
     Public Sub mp_error() Handles mp.EncounteredError
         StateVal = "Error"
-        PictureBox1.Show()
-        PictureBox1.Image = My.Resources.noise
+        ShowNoise = True
+        NoiseType = My.Resources.noise
     End Sub
     Public Sub mp_endreached() Handles mp.EndReached
         StateVal = "Ended"
-        PictureBox1.Show()
-        PictureBox1.Image = My.Resources.noise
+        ShowNoise = True
+        NoiseType = My.Resources.noise
     End Sub
     Public Sub mp_paused() Handles mp.Paused
         StateVal = "Paused"
-        PictureBox1.Hide()
+        ShowNoise = False
     End Sub
     Public Sub mp_stopped() Handles mp.Stopped
         StateVal = "Stopped"
-        PictureBox1.Show()
-        PictureBox1.Image = My.Resources.noise
+        ShowNoise = True
+        NoiseType = My.Resources.noise
     End Sub
     Public Sub mp_nothing() Handles mp.TimeChanged
         StateVal = "Playing (" & Math.Round(mp.Time / 1000) & " seconds)"
-        PictureBox1.Hide()
+        ShowNoise = False
     End Sub
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Enter AndAlso e.Alt = True Then
             ExitFullScreen()
             e.Handled = True
+            My.Computer.Audio.Stop()
         End If
     End Sub
 
