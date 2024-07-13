@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>OnlineATV_Client.My.MyApplication</StartupObject>
     <RootNamespace>OnlineATV_Client</RootNamespace>
-    <AssemblyName>OnlineATV Client</AssemblyName>
+    <AssemblyName>OnlineATV Client Legacy</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -98,6 +98,9 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LibVLCSharp, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LibVLCSharp.3.7.0\lib\net471\LibVLCSharp.dll</HintPath>
@@ -162,6 +165,12 @@
     <Compile Include="HowTo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LegacyMessage.Designer.vb">
+      <DependentUpon>LegacyMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LegacyMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -195,6 +204,9 @@
     <EmbeddedResource Include="HowTo.resx">
       <DependentUpon>HowTo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LegacyMessage.resx">
+      <DependentUpon>LegacyMessage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -206,6 +218,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

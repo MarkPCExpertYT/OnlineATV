@@ -117,44 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAS
-        BAAAAk1TRnQBSQFMAgEBCwEAAcgBAAHIAQABEAEAARABAAT/AQUBAAj/AUIBTQF2BwABdgMAASgDAAFA
-        AwABMAMAAQEBAAEEBgABBhgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQADgAMAAf8CAAH/
-        AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP/AQAYzAgAGMwIAAzMAf8LzAgAAswE/wbMAf8EzAHPAfwBzwH8
-        Ac8B/AHMCAACzAH/AfwBzwH/BswB/wTMAc8B/AHPAfwBzwH8AcwIAALMAf8B/AjMAf8LzAgAAswBzwH/
-        CMwB/wvMCAADzAH/AfwHzAH/C8wIAAPMAc8B/wfMAf8LzAgABMwB/wH8BcwB/AH/C8wIAATMAc8B/wXM
-        Av8LzAgAAswB/wH8Ac8B/wXMAc8B/wvMCAACzAHPAv8B/AbMAf8LzAgAGMwIABjMCAAYzAgAYswBzwL/
-        AfwEzAHPAv8B/AXMAc8B/wH8BMwBzwL/AfwEzAH/AfwBzwH/BMwB/wH8Ac8B/wbMAf8FzAH/AfwBzwH/
-        BMwB/wH8Ac8B/wbMAc8B/wbMAf8HzAHPAf8EzAH/AfwBzwH/BswBzwH/BswB/wfMAc8B/wTMAf8B/AHP
-        Af8GzAHPAf8EzAP/AfwGzAHPAf8EzAP/AfwEzAP/AfwEzAH/AcwB/wbMAv8B/ATMAf8B/AbMAf8B/AbM
-        Ac8B/AH/B8wBzwH/BMwB/wH8BswB/wH8B8wC/wfMAc8B/wTMAc8B/wbMAf8B/AfMAc8B/wXMAf8B/AHP
-        Af8FzAL/BcwE/wbMAf8FzAHPAv8B/MLMAc8C/wH8AcwB/wH8A8wBzwL/BcwBzwL/AfwFzAH/AfwEzAHP
-        AfwBzAHPAfwB/wXMAf8B/ATMAf8B/AHPAf8FzAH/AfwEzAHPAfwBzAH/AcwBzwH8BMwBzwH/BMwB/wH8
-        Ac8B/wXMAf8B/ATMAc8B/AHMAf8BzAHPAfwEzAHPAf8EzAH/AfwBzwH/BcwB/wH8BMwBzwH8AcwB/wLP
-        AfwEzAHPAf8EzAH/AfwBzwH/BcwBzwH/BMwBzwH8AcwB/wLPAfwCzAHPA/8EzAHPAv8B/AbMAf8B/APM
-        Ac8B/AHMAf8BzAHPAfwCzAH/AfwBzwH/BMwB/wH8Ac8B/wbMAc8B/wLMAc8B/wH8AcwB/wHMAc8B/ALM
-        Af8B/AHPAf8EzAH/AfwBzwH/BswBzwH/A8wB/wH8AcwBzwH8Af8DzAH/AfwBzwH/BMwB/wH8Ac8B/wTM
-        Af8B/AHPAf8DzAHPAfwCzAH/AfwDzAHPAv8B/ATMAc8C/wH8BMwE/2LMAUIBTQE+BwABPgMAASgDAAFA
-        AwABMAMAAQEBAAEBBQABgAEBFgAD//8AggAL
-</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>This client was created around a year ago, and with (relatively) terrible code.
+Since then, I've learned a lot more about coding, and thus I will be abandoning this client, because a new one is in the works!
+
+The legacy client will continue to receive patches and bugfixes until the end of 2024, but main development will stop at version 1.6 (this is 1.6.1).
+
+All versions of this client will be minor updates to keep it working. Coming versions will all be 1.6.x (such as 1.6.2 or 1.6.3)</value>
   </data>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 17</value>
-  </metadata>
-  <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 17</value>
-  </metadata>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>305, 17</value>
-  </metadata>
-  <metadata name="Timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>420, 17</value>
-  </metadata>
 </root>

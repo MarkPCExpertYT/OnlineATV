@@ -5,7 +5,7 @@ Imports LibVLCSharp.[Shared]
 Public Class Form1
 
 
-    Public Const VersionString As String = "1.60"
+    Public Const VersionString As String = "1.6.1"
 
 
 
@@ -24,7 +24,7 @@ Public Class Form1
             IO.File.Delete(Environment.GetFolderPath(26) + "\rtmp.txt")
         Catch ex As Exception
         End Try
-        My.Computer.Network.DownloadFile("https://alekeagle.me/hCbGVwu5aF.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
+        My.Computer.Network.DownloadFile("https://cdn.alekeagle.me/hCbGVwu5aF.txt", Environment.GetFolderPath(26) + "\rtmp.txt")
         'IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt")
         If IO.File.ReadAllText(Environment.GetFolderPath(26) + "\rtmp.txt").Contains("rtmp://") = False Then
             MsgBox("Server is unavaible or inactive, channels 1-10 will not work.")
@@ -36,6 +36,9 @@ Public Class Form1
         Label1.Text = "Please select a channel
 Status: None
 URL: Unavailable"
+        If My.Settings.ShowMessage = True Then
+            LegacyMessage.ShowDialog()
+        End If
         SplashScreen.Close()
         PlayerGraphics = VideoView1.CreateGraphics()
     End Sub
@@ -330,5 +333,9 @@ URL: " & customin
 
     Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         FMainActive = True
+    End Sub
+
+    Private Sub ClearSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearSettingsToolStripMenuItem.Click
+        My.Settings.Reset()
     End Sub
 End Class

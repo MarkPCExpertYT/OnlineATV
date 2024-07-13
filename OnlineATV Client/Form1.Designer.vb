@@ -70,8 +70,9 @@ Partial Class Form1
         Me.HowDoIStreamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ClearSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.VideoView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,7 +188,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button5)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Size = New System.Drawing.Size(150, 511)
-        Me.SplitContainer1.SplitterDistance = 462
+        Me.SplitContainer1.SplitterDistance = 461
         Me.SplitContainer1.TabIndex = 4
         '
         'ListView1
@@ -199,7 +200,7 @@ Partial Class Form1
         Me.ListView1.Location = New System.Drawing.Point(0, 35)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Scrollable = False
-        Me.ListView1.Size = New System.Drawing.Size(150, 427)
+        Me.ListView1.Size = New System.Drawing.Size(150, 426)
         Me.ListView1.SmallImageList = Me.ImageList1
         Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -237,7 +238,7 @@ Partial Class Form1
         Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button5.Location = New System.Drawing.Point(76, 0)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(74, 45)
+        Me.Button5.Size = New System.Drawing.Size(74, 46)
         Me.Button5.TabIndex = 5
         Me.Button5.Text = "Fullscreen"
         Me.Button5.UseVisualStyleBackColor = True
@@ -247,7 +248,7 @@ Partial Class Form1
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Button1.Location = New System.Drawing.Point(0, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 45)
+        Me.Button1.Size = New System.Drawing.Size(76, 46)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Show/hide info"
         Me.Button1.UseVisualStyleBackColor = True
@@ -283,19 +284,19 @@ Partial Class Form1
         '
         Me.CustomChannelToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.CustomChannelToolStripMenuItem.Name = "CustomChannelToolStripMenuItem"
-        Me.CustomChannelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CustomChannelToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.CustomChannelToolStripMenuItem.Text = "Custom channel"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(158, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ViewToolStripMenuItem
@@ -309,7 +310,7 @@ Partial Class Form1
         '
         Me.FullscreenToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.FullscreenToolStripMenuItem.Name = "FullscreenToolStripMenuItem"
-        Me.FullscreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FullscreenToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.FullscreenToolStripMenuItem.Text = "Fullscreen"
         '
         'ShowhideInfoToolStripMenuItem
@@ -317,20 +318,20 @@ Partial Class Form1
         Me.ShowhideInfoToolStripMenuItem.CheckOnClick = True
         Me.ShowhideInfoToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ShowhideInfoToolStripMenuItem.Name = "ShowhideInfoToolStripMenuItem"
-        Me.ShowhideInfoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowhideInfoToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ShowhideInfoToolStripMenuItem.Text = "Hide info bar"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(140, 6)
         '
         'DisableNoiseToolStripMenuItem
         '
         Me.DisableNoiseToolStripMenuItem.CheckOnClick = True
         Me.DisableNoiseToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.DisableNoiseToolStripMenuItem.Name = "DisableNoiseToolStripMenuItem"
-        Me.DisableNoiseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DisableNoiseToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.DisableNoiseToolStripMenuItem.Text = "Disable noise"
         '
         'SoundToolStripMenuItem
@@ -346,7 +347,7 @@ Partial Class Form1
         Me.MuteToolStripMenuItem.CheckOnClick = True
         Me.MuteToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.MuteToolStripMenuItem.Name = "MuteToolStripMenuItem"
-        Me.MuteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MuteToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
         Me.MuteToolStripMenuItem.Text = "Mute"
         '
         'PlaybackToolStripMenuItem
@@ -361,43 +362,46 @@ Partial Class Form1
         '
         Me.StopToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.StopToolStripMenuItem.Name = "StopToolStripMenuItem"
-        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.StopToolStripMenuItem.Text = "Stop"
         '
         'RestartToolStripMenuItem
         '
         Me.RestartToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.RestartToolStripMenuItem.Name = "RestartToolStripMenuItem"
-        Me.RestartToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RestartToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.RestartToolStripMenuItem.Text = "Restart"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowDoIStreamToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'HowDoIStreamToolStripMenuItem
         '
         Me.HowDoIStreamToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.HowDoIStreamToolStripMenuItem.Name = "HowDoIStreamToolStripMenuItem"
-        Me.HowDoIStreamToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HowDoIStreamToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.HowDoIStreamToolStripMenuItem.Text = "How do I stream?"
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.ClearSettingsToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'Timer3
+        '
+        Me.Timer3.Enabled = True
         '
         'PictureBox1
         '
@@ -411,9 +415,11 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
-        'Timer3
+        'ClearSettingsToolStripMenuItem
         '
-        Me.Timer3.Enabled = True
+        Me.ClearSettingsToolStripMenuItem.Name = "ClearSettingsToolStripMenuItem"
+        Me.ClearSettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearSettingsToolStripMenuItem.Text = "Clear settings"
         '
         'Form1
         '
@@ -429,7 +435,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.ShowIcon = False
-        Me.Text = "OnlineATV Client"
+        Me.Text = "OnlineATV Client Legacy"
         CType(Me.VideoView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -481,6 +487,7 @@ Partial Class Form1
     Friend WithEvents HowDoIStreamToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RestartToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer3 As Timer
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearSettingsToolStripMenuItem As ToolStripMenuItem
 End Class

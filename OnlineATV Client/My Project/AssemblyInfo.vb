@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("OnlineATV Client")>
-<Assembly: AssemblyDescription("A client for watching OnlineATV broadcasts")>
+<Assembly: AssemblyTitle("OnlineATV Client Legacy")>
+<Assembly: AssemblyDescription("A client for watching OnlineATV broadcasts (legacy version)")>
 <Assembly: AssemblyCompany("linuxuser2064")>
-<Assembly: AssemblyProduct("OnlineATV Client")>
+<Assembly: AssemblyProduct("OnlineATV Client Legacy")>
 <Assembly: AssemblyCopyright("Copyleft (L) linuxuser2064")>
 <Assembly: AssemblyTrademark("")>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.5.0.0")>
-<Assembly: AssemblyFileVersion("1.5.0.0")>
+<Assembly: AssemblyVersion("1.6.1.0")>
+<Assembly: AssemblyFileVersion("1.6.1.0")>
